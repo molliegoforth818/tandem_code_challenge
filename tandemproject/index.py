@@ -1,7 +1,8 @@
 import os 
+from start_quiz import start_quiz
+from list_of_questions import list_of_questions
 
-
-def home_menu(): 
+def build_menu(): 
     os.system('cls' if os.name == 'nt' else 'clear')
     print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
     print("|  T A N D E M   T R I V I A  |")
@@ -10,3 +11,18 @@ def home_menu():
     print("2. See Questions")
     print("3. Exit ")
 
+def main_menu():
+
+    build_menu()
+    choice = input(">_ ")
+
+    if choice == "1":
+        start_quiz()
+
+    if choice == "2":
+        list_of_questions()
+
+    if choice != "3":
+        main_menu()
+
+main_menu()

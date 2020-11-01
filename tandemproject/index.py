@@ -1,5 +1,5 @@
 import os 
-# from start_quiz import start_quiz
+from start_quiz import start_quiz
 from show_questions import list_of_questions
 
 def build_menu(): 
@@ -12,13 +12,12 @@ def build_menu():
     print("3. Exit ")
 
 def main_menu():
-
     build_menu()
     choice = input(">_ ")
 
-    # if choice == "1":
-      # start_quiz()
-
+    if choice == "1":
+      start_quiz()
+      main_menu()
     if choice == "2":
         list_of_questions()
         main_menu()

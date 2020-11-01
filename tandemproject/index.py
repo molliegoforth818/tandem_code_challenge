@@ -1,6 +1,6 @@
 import os 
-from start_quiz import start_quiz
-from list_of_questions import list_of_questions
+# from start_quiz import start_quiz
+from show_questions import list_of_questions
 
 def build_menu(): 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -16,13 +16,14 @@ def main_menu():
     build_menu()
     choice = input(">_ ")
 
-    if choice == "1":
-        start_quiz()
+    # if choice == "1":
+      # start_quiz()
 
     if choice == "2":
         list_of_questions()
+        main_menu()
 
     if choice != "3":
-        main_menu()
+        exit()
 
 main_menu()

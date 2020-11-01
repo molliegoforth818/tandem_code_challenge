@@ -5,9 +5,9 @@ import random
 def list_of_questions():
     os.system('cls' if os.name == 'nt' else 'clear')
     with open("quiz.json") as json_file:
-        data = json.load(json_file)
-        random.shuffle(data)
-        for d in data:
+        quiz = json.load(json_file)
+        random.shuffle(quiz)
+        for d in quiz:
             question = d['question']
             print(f'\n{question}')
 

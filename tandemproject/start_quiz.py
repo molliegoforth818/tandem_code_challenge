@@ -1,12 +1,8 @@
 import json
 import os 
 import random
-from answer_list import show_answers
-from answer_list import get_answer_list
-from scores import correct
-from scores import incorrect
-
-
+from answer_list import show_answers, get_answer_list
+from scores import correct, incorrect
 
 def start_quiz():
     score = 0
@@ -14,12 +10,12 @@ def start_quiz():
         quiz = json.load(json_file)
         random.shuffle(quiz)
 
-        for d in quiz[:10]:
+        for question_object in quiz[:10]:
             os.system('cls' if os.name == 'nt' else 'clear')
-            question = d['question']
-            print(f'[?] {question}')
+            question = question_object['question']
+            print(f'{question}')
 
-            answers = get_answer_list(d)
+            answers = get_answer_list(question_object)
 
             show_answers(answers)
 
@@ -38,33 +34,32 @@ def start_quiz():
                     break
 
             if choice == 1:
-                if answers[0] == d['correct']:
+                if answers[0] == question_object['correct']:
                     correct()
                     score += 1
                 else:
-                    incorrect(d)
+                    incorrect(question_object)
 
             if choice == 2:
-                if answers[1] == d['correct']:
+                if answers[1] == question_object['correct']:
                     correct()
                     score += 1
                 else:
-                    incorrect(d)
+                    incorrect(question_object)
 
             if choice == 3:
-                if answers[2] == d['correct']:
+                if answers[2] == question_object['correct']:
                     correct()
                     score += 1
                 else:
-                    incorrect(d)
+                    incorrect(question_object)
 
             if choice == 4:
-                if answers[3] == d['correct']:
+                if answers[3] == question_object['correct']:
                     correct()
                     score += 1
                 else:
-                    incorrect(d)
-
+                    incorrect(question_object)
     if score == 10:
         print(
             f'Wow {score}/10\nPerfect Score!\n')

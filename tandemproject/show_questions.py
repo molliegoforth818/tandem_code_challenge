@@ -11,4 +11,4 @@ def list_of_questions():
             question = d['question']
             print(f'\n{question}')
 
-    input("\n\nPress Enter to return to home.\n\n")
+    input("\n\nPress Enter to return home.\n\n")

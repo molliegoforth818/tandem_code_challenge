@@ -26,7 +26,7 @@
 ```sh
 git clone https://github.com/molliegoforth818/tandem_code_challenge
 ```
-2.```sh
+2.```
 cd```into ```tandemproject```
 
 3. Activate the virtual environment

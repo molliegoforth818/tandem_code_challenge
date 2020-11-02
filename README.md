@@ -26,7 +26,8 @@
 ```sh
 git clone https://github.com/molliegoforth818/tandem_code_challenge
 ```
-2.```sh cd ```into ```tandemproject```
+2.```sh
+cd```into ```tandemproject```
 
 3. Activate the virtual environment
 ```sh
@@ -48,7 +49,7 @@ I had so much fun doing this code challenge! I'd love to add a timing feature, s
 
 ## Contact
 
-Mollie Goforth - [](https://www.linkedin.com/in/molliegoforth818/) - molliegoforth818@gmail.com
+Mollie Goforth - [https://www.linkedin.com/in/molliegoforth818/]() - molliegoforth818@gmail.com
 
 
 
